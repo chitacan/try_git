@@ -8,7 +8,7 @@
 <body>
 
 <div id="fb-root"></div>
-<div class="fb-login-button"></div>
+<div class="fb-login-button" show-faces="true"></div>
 <script type="text/javascript">
 	FB.init({
 		appId: 241967472566330,
@@ -19,11 +19,6 @@
 
 	FB.getLoginStatus(function(response) {
 		console.log(response);
-		if (response.session) {
-			console.log('login');
-		} else {
-			console.log('nop');
-		}
 	});
 </script>
 
