@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://connect.facebook.net/ko_KR/all.js" type="text/javascript"></script>
+	<title>login with facebook</title>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<div class="fb-login-button"></div>
+<script type="text/javascript">
+	FB.init({
+		appId: 241967472566330,
+		status: true,
+		cookie: true,
+		xfbml: true
+	});
+
+	FB.getLoginStatus(function(response) {
+		console.log(response);
+		if (response.session) {
+			console.log('login');
+		} else {
+			console.log('nop');
+		}
+	});
+</script>
+
+</body>
+</html>
